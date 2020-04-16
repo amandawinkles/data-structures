@@ -11,7 +11,7 @@ var Tree = function(value) {
 
 var treeMethods = {};
 
-treeMethods.addChild = function(value) { //add target as a parameter?
+treeMethods.addChild = function(value) {
   //set value to new child node? //var child = Tree(value)
   //push child node into this.children array
 };
