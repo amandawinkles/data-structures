@@ -28,3 +28,15 @@ class Queue {
     return this.newQueue.count;
   }
 }
+
+/*
+linkedList or array for queues
+
+var obj = {
+  2: 1,
+  3: 'yeah'
+  4: 'hello'
+}
+
+fifo = pointer- pointing to front/foremost value in queue
+*/
