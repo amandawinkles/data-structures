@@ -5,7 +5,7 @@ var Tree = function(value) {
   // your code here
   newTree.children = [];
   //_.extend(newTree, treeMethods)
-
+  _.extend(newTree, treeMethods);
   return newTree;
 };
 
@@ -13,17 +13,18 @@ var treeMethods = {};
 
 treeMethods.addChild = function(value) {
   //set value to new child node? //var child = Tree(value)
+  var child = Tree(value);
   //push child node into this.children array
+  this.children.push(child);
 };
 
 treeMethods.contains = function(target) {
-  //_.contains(Tree, target)?
-
   //if current node value is equal to the target
+  if (this.value === target) {
     //return true
-  //for loop to iterate through children
-    //call treeMethods.contains on each child
-  //return false
+    return true;
+  }
+  return this.children.some(child => child.contains(target));
 };
 
 
