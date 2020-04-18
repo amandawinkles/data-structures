@@ -1,18 +1,34 @@
 var Set = function() {
-  var set = Object.create(setPrototype);
-  set._storage = null; // fix me
+  // set constructor
+  var set = Object.create(setMethods);
+  // set storage object
+  set._storage = {};
   return set;
 };
 
-var setPrototype = {};
+// Set methods
+var setMethods = {
+  // add any string and add to set
+  add: function(item) {
+    // if given item is NOT already in set
+    // add this item to set storage
+    this._storage[item] = null; //item?
+    // and increase the sets length
+  },
 
-setPrototype.add = function(item) {
-};
+  // takes any string and returns a boolean reflecting whether it can be found in the set
+  contains: function(item) {
+    // object prototype method hasOwnProperty does exactly what we want here!
+    return this._storage.hasOwnProperty(item);
+  },
 
-setPrototype.contains = function(item) {
-};
-
-setPrototype.remove = function(item) {
+  // takes any string and removes it from the set if present
+  remove: function(item) {
+    // if given item is in set
+    // delete item from storage
+    // and reduce the sets length
+    delete this._storage[item];
+  }
 };
 
 /*
