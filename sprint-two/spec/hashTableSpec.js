@@ -73,4 +73,9 @@ describe('hashTable', function() {
     hashTable.remove('Mr.');
     expect(hashTable._limit).to.equal(8);
   });
+
+  it('should store numeric values that were inserted', function() {
+    hashTable.insert(1, 2);
+    expect(hashTable.retrieve(1)).to.equal(2);
+  });
 });

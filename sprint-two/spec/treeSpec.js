@@ -40,5 +40,8 @@ describe('tree', function() {
     expect(tree.contains(7)).to.equal(true);
     expect(tree.contains(8)).to.equal(true);
   });
-
+  it('should return true for a string value the tree contains', function() {
+    tree.addChild('5');
+    expect(tree.contains('5')).to.equal(true);
+  });
 });
